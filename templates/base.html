@@ -47,7 +47,7 @@
             </h1>
         </section>
 
-        <section class="row clearfix">
+        <section class="row clearfix pages">
             <ul class="col-lg-8 col-lg-offset-2 list-unstyled">
             {% for page in PAGES %}
                 <li class="h5 pull-right">
@@ -95,12 +95,6 @@
                         <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml">
                             <i class="fa-rss"></i>
                             Atom Posts Feed
-                        </a>
-                    </li>
-                    <li>                                 
-                        <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml">
-                            <i class="fa-rss"></i>
-                            RSS Posts Feed
                         </a>
                     </li>
                 </ul>
