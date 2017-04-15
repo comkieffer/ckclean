@@ -1,6 +1,7 @@
 
 html {
     font-family: 'Roboto', sans-serif;
+    background-color: #eeeeee;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -53,6 +54,12 @@ header .subtitle {
     padding-left: 2em; 
 }
 
+header .pages li {
+    font-style: normal;
+    margin-right: 10px;
+}
+
+
 article.post {
     padding-bottom: 2em; 
 }
@@ -72,4 +79,8 @@ pre {
     border: none;
     background-color: white;
     padding: 9.5px 2em;
+}
+
+tt, code, pre {
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
 }
