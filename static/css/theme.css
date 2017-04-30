@@ -1,11 +1,24 @@
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Titillium+Web:400,400i,600,600i,700,700i|Source+Code+Pro');
+
+/* Global Page Styles */
+
 html {
-    font-family: 'Roboto', sans-serif;
-    background-color: #eeeeee;
+    font-family: 'Open Sans', sans-serif;
+    
+    background-color: #f0f0f0;
+    background-image: url(/theme/img/gplay.svg);
+
+    padding: 0px 25px 25px 25px; 
+}
+
+body {
+    /* Override bootstrap defaults */
+    background-color: transparent;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto-Condensed', sans-serif !important;
+        font-family: 'Titillium Web', sans-serif;
 }
 
 a {
@@ -13,50 +26,123 @@ a {
     text-decoration: none;
 }
 
-blockquote { font-size: 1em;  }
-
-.indent {
-    padding-left: 2em; 
+tt, code, pre {
+    font-family: "Source Code Pro", monospace;
 }
 
-.post-content a {
-    text-decoration: underline; 
+dl {
+    margin: 1em 0em;; 
+}
+
+dl > dt {
+    margin-bottom: 0.5em;
+    font-size: 1.05em; 
+}
+
+dl > dd {
+    margin-bottom: 1em; 
+    margin-left: 0.5em; 
+}
+
+blockquote { font-size: 1em;  }
+
+
+/* Element Styles */
+
+header {
+    margin: 0px 0em 3em 0em;
+    padding: 2em 2em 0.75em 2em;  
+    width: 100%;
+
+    background-color: rgb(253, 253, 253);
+    box-shadow: 0px 10px 10px rgba(1, 1, 1, 0.15)
+}
+
+header h1 {
+    margin-bottom: 1em;
+
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 3em;
+
+    color: rgba(0, 0, 0, 1);
+}
+
+header .subtitle {
+    padding-left: 2em; 
+
+    font-weight: 400;
+    font-style: normal;
+   
+    color: rgba(0, 0, 0, 0.5)
+}
+
+header .pages li a {
+    font-family: 'Titillium Web', sans-serif;
+    font-style: normal;
+    font-size: 1.3em;
+    color: rgba(0, 0, 0, 0.65);
+
+    margin-right: 10px;
+}
+
+
+
+.post {
+    padding: 2em;
+    margin-bottom: 1em;
+    background-color: rgb(253, 253, 253);
+
+    box-shadow: 0px 10px 10px rgba(1, 1, 1, 0.15)
+}
+
+.post .post-header {
+    padding-bottom: 1em;
+    margin-bottom: 1.5em; 
+
+    border-bottom: 1px dashed rgba(0,0,0, 0.3);
+}
+
+.post .post-info {
+    padding-left: 2em; 
+    font-size: 1.4rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.post .post-info a {
+    color: rgba(0, 0, 0, 0.5);
+    text-decoration: underline;
 }
 
 .post-content h1, 
 .post-content h2, 
 .post-content h3 {
     padding-top: 1em; 
+    font-style: italic;
 } 
 
-.post .post-header {
-    margin-bottom: 1em; 
+.post-content a {
+    text-decoration: underline; 
 }
 
 .post .post-continue-link, 
 .post .post-continue-link a {
-    color: #777 ;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* Utility Classes */
+
+.indent {
+    padding-left: 2em; 
 }
 
 .figure .caption {
     margin-left: 2em;
     margin-right: 2em;
     font-size: 0.9em; 
-}
-
-header {
-    padding: 2em;
-    padding-bottom: 4em;  
-    font-style: italic;
-}
-
-header .subtitle {
-    padding-left: 2em; 
-}
-
-header .pages li {
-    font-style: normal;
-    margin-right: 10px;
 }
 
 
@@ -77,10 +163,83 @@ img {
 
 pre {
     border: none;
-    background-color: white;
     padding: 9.5px 2em;
 }
 
-tt, code, pre {
-    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+/* Import Bootstrap table styles */
+
+table {
+  border: 1px solid #ddd;  border-spacing: 0;
+  border-bottom-width: 2px;
+
+  border-collapse: collapse;
+  background-color: transparent;
+
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+td, th { padding: 0; }
+th { text-align: left; }
+
+table > thead > tr > th,
+table > tbody > tr > th,
+table > tfoot > tr > th,
+table > thead > tr > td,
+table > tbody > tr > td,
+table > tfoot > tr > td {
+  padding: 5px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+}
+
+table > thead > tr > th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #ddd;
+}
+
+table > caption + thead > tr:first-child > th,
+table > colgroup + thead > tr:first-child > th,
+table > thead:first-child > tr:first-child > th,
+table > caption + thead > tr:first-child > td,
+table > colgroup + thead > tr:first-child > td,
+table > thead:first-child > tr:first-child > td {
+  border-top: 0;
+}
+
+table > tbody + tbody {
+  border-top: 2px solid #ddd;
+}
+
+/*  Stripes */
+table > tbody > tr:nth-child(odd) > td,
+table > tbody > tr:nth-child(odd) > th {
+  background-color: #f9f9f9;
+}
+
+/* Highlight Row */
+table > tbody > tr:hover > td,
+table > tbody > tr:hover > th {
+  background-color: #f5f5f5;
+}
+
+table col[class*="col-"] {
+  position: static;
+  display: table-column;
+  float: none;
+}
+table td[class*="col-"],
+table th[class*="col-"] {
+  position: static;
+  display: table-cell;
+  float: none;
+}
+
+tr.collapse.in {
+  display: table-row;
+}
+tbody.collapse.in {
+  display: table-row-group;
 }

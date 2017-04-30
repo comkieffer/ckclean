@@ -15,7 +15,11 @@
 	<div class="post-header">
 		<h2>{{ article.title }}</h2>
 
-		<time datetime="{{ article.date.isoformat() }}" itemprop="datePublished">{{ article.date|strftime('%d %B %Y') }}</time>
+		<div class="row post-info	">
+			<div class="col-xs-12">
+				Published <time class="post-pubdate" datetime="{{ article.date.isoformat() }}" itemprop="datePublished">{{ article.date|strftime('%d %B %Y') }}</time> in <a href="{{ SITEURL }}/{{article.category.url}}">{{ article.category.name | capitalize }}</a>
+			</div>
+		</div>
 	</div>
 
 	<div class="post-content">
