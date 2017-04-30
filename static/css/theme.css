@@ -6,10 +6,10 @@
 html {
     font-family: 'Open Sans', sans-serif;
     
-    background-color: #f0f0f0;
+    background-color: #e3e6ee;
     background-image: url(/theme/img/gplay.svg);
 
-    padding: 0px 25px 25px 25px; 
+    padding: 0px 0px 25px 0px; 
 }
 
 body {
@@ -115,14 +115,14 @@ header .pages li a {
     text-decoration: underline;
 }
 
-.post-content h1, 
-.post-content h2, 
-.post-content h3 {
+.post .post-content h1, 
+.post .post-content h2, 
+.post .post-content h3 {
     padding-top: 1em; 
     font-style: italic;
 } 
 
-.post-content a {
+.post .post-content a {
     text-decoration: underline; 
 }
 
