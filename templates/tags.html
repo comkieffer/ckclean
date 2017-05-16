@@ -9,16 +9,22 @@
 {% endblock %}
 
 {% block content %}
+<article class="post">
+
 {% for tag, articles in tags %}
-	<h3>
-	    <small>Articles in </small>
-	    <a href="{{ SITEURL }}/{{ tag.url }}">
-	        {{ tag | capitalize }}
-	    </a>
-	</h3>
-	<table class="table">
-	    <tbody>
-	    {% for article in articles %}
+	<div class="post-header">
+		<h3>
+		    <small>Articles in </small>
+		    <a href="{{ SITEURL }}/{{ tag.url }}">
+		        {{ tag | capitalize }}
+		    </a>
+		</h3>
+	</div>
+
+	<div class="post-content">
+		<table class="table">
+		    <tbody>
+		    {% for article in articles %}
 	        <tr>
 	            <td>{{ article.date.strftime("%d %b %Y") }}</td>
 
@@ -28,8 +34,11 @@
 	                </a>
 	            </td>
 	        </tr>
-	    {% endfor %}
-	    </tbody>
-	</table>	
+		    {% endfor %}
+		    </tbody>
+		</table>	
+	</div>
 {% endfor %}
+
+</article>
 {% endblock %}

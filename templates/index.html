@@ -13,7 +13,7 @@
 
             <div class="row post-info   ">
                 <div class="col-xs-12">
-                    Published <time class="post-pubdate" datetime="{{ article.date.isoformat() }}" itemprop="datePublished">{{ article.date|strftime('%d %B %Y') }}</time> in <a href="{{ SITEURL }}/{{article.category.url}}">{{ article.category.name | capitalize }}</a>
+                    Published <time class="post-pubdate" datetime="{{ article.date.isoformat() }}" itemprop="datePublished">{{ article.locale_date }}</time> in <a href="{{ SITEURL }}/{{article.category.url}}">{{ article.category.name | capitalize }}</a>
                 </div>
             </div>
         </div>

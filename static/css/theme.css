@@ -3,9 +3,7 @@
 
 /* Global Page Styles */
 
-html {
-    font-family: 'Open Sans', sans-serif;
-    
+html {    
     background-color: #e3e6ee;
     background-image: url(/theme/img/gplay.svg);
 
@@ -15,6 +13,8 @@ html {
 body {
     /* Override bootstrap defaults */
     background-color: transparent;
+    font-family: 'Open Sans', sans-serif;
+    text-align: justify;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -87,8 +87,6 @@ header .pages li a {
     margin-right: 10px;
 }
 
-
-
 .post {
     padding: 2em;
     margin-bottom: 1em;
@@ -104,13 +102,13 @@ header .pages li a {
     border-bottom: 1px dashed rgba(0,0,0, 0.3);
 }
 
-.post .post-info {
+.post .post-header .post-info {
     padding-left: 2em; 
     font-size: 1.4rem;
     color: rgba(0, 0, 0, 0.5);
 }
 
-.post .post-info a {
+.post .post-header .post-info a {
     color: rgba(0, 0, 0, 0.5);
     text-decoration: underline;
 }
@@ -134,6 +132,7 @@ header .pages li a {
 
 
 /* Utility Classes */
+/* Utility Classes & Other Stuff*/
 
 .indent {
     padding-left: 2em; 
@@ -143,11 +142,6 @@ header .pages li a {
     margin-left: 2em;
     margin-right: 2em;
     font-size: 0.9em; 
-}
-
-
-article.post {
-    padding-bottom: 2em; 
 }
 
 footer {

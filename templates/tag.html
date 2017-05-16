@@ -9,27 +9,32 @@
 {% endblock %}
 
 {% block content %}
+<article class="post">
+    <div class="post-header">
+        <h1>
+            <small>Articles in </small>
+            <a href="{{ SITEURL }}/{{ tag.url }}">
+                {{ tag | capitalize }}
+            </a>
+        </h1>
+    </div>
 
-<h1>
-    <small>Articles in </small>
-    <a href="{{ SITEURL }}/{{ tag.url }}">
-        {{ tag | capitalize }}
-    </a>
-</h1>
-<table class="table">
-    <tbody>
-    {% for article in articles %}
-        <tr>
-            <td>{{ article.date.strftime("%d %b %Y") }}</td>
+    <div class="post-content">
+        <table class="table">
+            <tbody>
+            {% for article in articles %}
+            <tr>
+                <td>{{ article.date.strftime("%d %b %Y") }}</td>
 
-            <td>
-                <a href="{{ SITEURL }}/{{ article.url }}">
-                    {{ article.title }}
-                </a>
-            </td>
-        </tr>
-    {% endfor %}
-    </tbody>
-</table>
-
+                <td>
+                    <a href="{{ SITEURL }}/{{ article.url }}">
+                        {{ article.title }}
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</article>
 {% endblock %}
